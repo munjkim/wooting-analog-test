@@ -103,11 +103,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/admin_pro/Development/ws_KeystrokeAuthentication/wooting-analog-test/wooting-analog-test.csproj",
+      "projectUniqueName": "/Users/admin_pro/Development/ws_KeystrokeAuthentication/wooting-analog-test/wooting-analog-test/wooting-analog-test.csproj",
       "projectName": "wooting-analog-test",
-      "projectPath": "/Users/admin_pro/Development/ws_KeystrokeAuthentication/wooting-analog-test/wooting-analog-test.csproj",
+      "projectPath": "/Users/admin_pro/Development/ws_KeystrokeAuthentication/wooting-analog-test/wooting-analog-test/wooting-analog-test.csproj",
       "packagesPath": "/Users/admin_pro/.nuget/packages/",
-      "outputPath": "/Users/admin_pro/Development/ws_KeystrokeAuthentication/wooting-analog-test/obj/",
+      "outputPath": "/Users/admin_pro/Development/ws_KeystrokeAuthentication/wooting-analog-test/wooting-analog-test/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/admin_pro/.nuget/NuGet/NuGet.Config"

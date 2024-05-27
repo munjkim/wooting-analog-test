@@ -1,0 +1,167 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "Newtonsoft.Json/12.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "WootingAnalogSDK.NET/0.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/WootingAnalogSDK.NET.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/WootingAnalogSDK.NET.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/libwooting_analog_wrapper.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/osx-x64/native/libwooting_analog_wrapper.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-x64/native/wooting_analog_wrapper.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Newtonsoft.Json/12.0.2": {
+      "sha512": "rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.2.nupkg.sha512",
+        "newtonsoft.json.nuspec"
+      ]
+    },
+    "WootingAnalogSDK.NET/0.5.0": {
+      "sha512": "yoEZ2dJekN59pvwDCX4wxzKKhHJRZVcnUsx60LqBlHC96HOwHW5ZX7SlOZVlbkUQ6mkSFdmhOiCKJSKiLXvimw==",
+      "type": "package",
+      "path": "wootinganalogsdk.net/0.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/net461/wooting_analog_wrapper.dll",
+        "contentFiles/any/net461/wooting_analog_wrapper.dll",
+        "lib/netstandard2.0/WootingAnalogSDK.NET.dll",
+        "runtimes/linux-x64/native/libwooting_analog_wrapper.so",
+        "runtimes/osx-x64/native/libwooting_analog_wrapper.dylib",
+        "runtimes/win-x64/native/wooting_analog_wrapper.dll",
+        "wootinganalogsdk.net.0.5.0.nupkg.sha512",
+        "wootinganalogsdk.net.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "WootingAnalogSDK.NET >= 0.5.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/admin_pro/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/admin_pro/Development/ws_KeystrokeAuthentication/wooting-analog-test/wooting-analog-test.csproj",
+      "projectName": "wooting-analog-test",
+      "projectPath": "/Users/admin_pro/Development/ws_KeystrokeAuthentication/wooting-analog-test/wooting-analog-test.csproj",
+      "packagesPath": "/Users/admin_pro/.nuget/packages/",
+      "outputPath": "/Users/admin_pro/Development/ws_KeystrokeAuthentication/wooting-analog-test/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/admin_pro/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "dependencies": {
+          "WootingAnalogSDK.NET": {
+            "target": "Package",
+            "version": "[0.5.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

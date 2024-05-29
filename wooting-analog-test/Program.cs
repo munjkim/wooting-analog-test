@@ -49,7 +49,7 @@ namespace analog_test
 						{
 							// Not just millisecond, but also second, minute, hour, day, month, year
 							Console.Write($"Timestamp: {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")} - ");
-							Console.Write($"({analog.Item1},{analog.Item2}) ");
+							Console.Write($"({analog.Item1},{analog.Item1111112}) ");
 							
 							// We want to put a space between each key
 							Console.Write(" ");

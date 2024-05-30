@@ -2,6 +2,7 @@
 using WootingAnalogSDKNET;
 using System.Threading;
 using System.Collections.Generic;
+using System.IO;
 
 namespace analog_test
 {
@@ -36,27 +37,58 @@ namespace analog_test
 					Console.WriteLine($"Device info has: {device}");
 				}
 
+				Console.Write("User name: ");
+				string userName = Console.ReadLine();
+				Console.Write("User ID: ");
+				string userID = Console.ReadLine();
+			
+				// Ensure the ./data directory exists
+				string directoryPath = "./data";
+				if (!Directory.Exists(directoryPath)) {
+					Directory.CreateDirectory(directoryPath);
+				}
+				
+				// Ensure the CSV file has a header if it's a new file
+				string fileName = $"{directoryPath}/{userID}_{userName}_{DateTime.Now:yyyyMMdd}.csv";
+				if (!File.Exists(fileName)) {
+					using (StreamWriter sw = File.CreateText(fileName)) {
+						sw.WriteLine("unixtime,keyCode,keyValue");
+					}
+				}
+
 				// This can be used to make the SDK give you keycodes from the Windows Virtual Key set that are translated based on the language set in Windows
 				// By default the keycodes the SDK will give you are the HID keycodes
 				//WootingAnalogSDK.SetKeycodeMode(KeycodeType.VirtualKeyTranslate);
 
 				while (true) {
-					var (keys, readErr) = WootingAnalogSDK.ReadFullBuffer(20);
+					var (keys, readErr) = WootingAnalogSDK.ReadFullBuffer(50);
+					
 					if (readErr == WootingAnalogResult.Ok)
 					{
-						
-						foreach (var analog in keys)
-						{
-							// Not just millisecond, but also second, minute, hour, day, month, year
-							Console.Write($"Timestamp: {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")} - ");
-							Console.Write($"({analog.Item1},{analog.Item1111112}) ");
-							
-							// We want to put a space between each key
-							Console.Write(" ");
+						long unixTimestamp = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+
+						if (keys.Count > 0) {
+
+							// Print the unixtimestamp
+							// Console.Write($"UnixTimestamp: {DateTimeOffset.Now.ToUnixTimeMilliseconds()} - ");
 						}
 
-						if (keys.Count > 0)
-							Console.WriteLine();
+						foreach (var analog in keys)
+						{
+							// Console.Write($"{unixTimestamp} : {analog.Item1},{analog.Item2}\n");
+							
+							// Append the data to the CSV file
+							using (StreamWriter sw = File.AppendText(fileName)) {
+								sw.WriteLine($"{unixTimestamp},{analog.Item1},{analog.Item2}");
+							}
+
+						}
+
+						if (keys.Count > 0){
+							// Console.WriteLine();
+						}
+
+					
 					}
 					else
 					{
@@ -66,10 +98,10 @@ namespace analog_test
 					}
 
 					// We want to have a bit of a delay so we don't spam the console with new values
-					// This is just milliseconds, so it's not a long delay.
-					// How about nanoseconds? No, that's too fast.
-
+					// 1 milli second = 1000 micro second
 					Thread.Sleep(1);
+
+					// 100 microsecond.
 				}
 			}
 			else {

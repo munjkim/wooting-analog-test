@@ -66,16 +66,15 @@ namespace analog_test
 					if (readErr == WootingAnalogResult.Ok)
 					{
 						long unixTimestamp = DateTimeOffset.Now.ToUnixTimeMilliseconds();
-
+						/*
 						if (keys.Count > 0) {
-
 							// Print the unixtimestamp
-							// Console.Write($"UnixTimestamp: {DateTimeOffset.Now.ToUnixTimeMilliseconds()} - ");
+							Console.Write($"UnixTimestamp: {DateTimeOffset.Now.ToUnixTimeMilliseconds()} - ");
 						}
-
+						*/
 						foreach (var analog in keys)
 						{
-							// Console.Write($"{unixTimestamp} : {analog.Item1},{analog.Item2}\n");
+							Console.Write($"{unixTimestamp} : {analog.Item1},{analog.Item2}\n");
 							
 							// Append the data to the CSV file
 							using (StreamWriter sw = File.AppendText(fileName)) {
@@ -83,12 +82,11 @@ namespace analog_test
 							}
 
 						}
-
+						/*
 						if (keys.Count > 0){
-							// Console.WriteLine();
+							Console.WriteLine();
 						}
-
-					
+						*/
 					}
 					else
 					{
@@ -96,12 +94,9 @@ namespace analog_test
 						// We want to put more of a delay in when we get an error as we don't want to spam the log with the errors
 						Thread.Sleep(1000);
 					}
-
 					// We want to have a bit of a delay so we don't spam the console with new values
 					// 1 milli second = 1000 micro second
 					Thread.Sleep(1);
-
-					// 100 microsecond.
 				}
 			}
 			else {

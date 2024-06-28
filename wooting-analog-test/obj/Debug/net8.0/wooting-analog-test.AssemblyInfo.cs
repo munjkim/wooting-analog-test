@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("wooting-analog-test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d7649e15e62d6277d01b1c4420d79dee8f64ecc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+969022d8ca1412dcb5f327808263ea8c0ae16676")]
 [assembly: System.Reflection.AssemblyProductAttribute("wooting-analog-test")]
 [assembly: System.Reflection.AssemblyTitleAttribute("wooting-analog-test")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

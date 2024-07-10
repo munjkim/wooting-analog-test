@@ -44,6 +44,8 @@ namespace analog_test
 				string userName = Console.ReadLine();
 				Console.Write("User ID: ");
 				string userID = Console.ReadLine();
+				Console.Write("Session: ");
+				string userSession = Console.ReadLine();
 			
 				// Ensure the ./data directory exists
 				string directoryPath = "./data";
@@ -52,7 +54,7 @@ namespace analog_test
 				}
 				
 				// Ensure the CSV file has a header if it's a new file
-				string fileName = $"{directoryPath}/{userID}_{userName}_{DateTime.Now:yyyyMMdd}.csv";
+				string fileName = $"{directoryPath}/{userID}_{userName}_{userSession}.csv";
 				if (!File.Exists(fileName)) {
 					using (StreamWriter sw = File.CreateText(fileName)) {
 						sw.WriteLine("unixtime,keyCode,keyValue");

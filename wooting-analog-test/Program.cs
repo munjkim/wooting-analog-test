@@ -15,7 +15,7 @@ namespace analog_test
 
 		// static void Main(string[] args)
 
-		static async async Task.Main(string[] args)
+		static async Task Main(string[] args)
 		{
 			Console.WriteLine("Hello Analog SDK!");
 
@@ -98,7 +98,7 @@ namespace analog_test
 						Console.WriteLine($"Read failed with {readErr}");
 						// We want to put more of a delay in when we get an error as we don't want to spam the log with the errors
 						// Thread.Sleep(1000);
-						await.Task.Delay(1000);
+						await Task.Delay(1000);
 					}
 					// We want to have a bit of a delay so we don't spam the console with new values
 					// 1 milli second = 1000 micro second

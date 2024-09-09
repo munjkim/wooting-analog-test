@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = system_time_resolution
-build_property.ProjectDir = /Users/admin_pro/Development/ws_KeystrokeAuthentication/system-time-resolution/
+build_property.ProjectDir = /Users/admin_pro/Development/ws_KeystrokeAuthentication/wooting-analog-test/system-time-resolution/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

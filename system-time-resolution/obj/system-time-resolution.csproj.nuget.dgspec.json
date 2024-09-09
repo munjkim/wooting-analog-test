@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/admin_pro/Development/ws_KeystrokeAuthentication/system-time-resolution/system-time-resolution.csproj": {}
+    "/Users/admin_pro/Development/ws_KeystrokeAuthentication/wooting-analog-test/system-time-resolution/system-time-resolution.csproj": {}
   },
   "projects": {
-    "/Users/admin_pro/Development/ws_KeystrokeAuthentication/system-time-resolution/system-time-resolution.csproj": {
+    "/Users/admin_pro/Development/ws_KeystrokeAuthentication/wooting-analog-test/system-time-resolution/system-time-resolution.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/admin_pro/Development/ws_KeystrokeAuthentication/system-time-resolution/system-time-resolution.csproj",
+        "projectUniqueName": "/Users/admin_pro/Development/ws_KeystrokeAuthentication/wooting-analog-test/system-time-resolution/system-time-resolution.csproj",
         "projectName": "system-time-resolution",
-        "projectPath": "/Users/admin_pro/Development/ws_KeystrokeAuthentication/system-time-resolution/system-time-resolution.csproj",
+        "projectPath": "/Users/admin_pro/Development/ws_KeystrokeAuthentication/wooting-analog-test/system-time-resolution/system-time-resolution.csproj",
         "packagesPath": "/Users/admin_pro/.nuget/packages/",
-        "outputPath": "/Users/admin_pro/Development/ws_KeystrokeAuthentication/system-time-resolution/obj/",
+        "outputPath": "/Users/admin_pro/Development/ws_KeystrokeAuthentication/wooting-analog-test/system-time-resolution/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/admin_pro/.nuget/NuGet/NuGet.Config"
